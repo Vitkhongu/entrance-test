@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Task1: String Length Frequency
+    - Khởi tạo state lưu trữ input
+    - Xử lý function handleCalculate tách input nhập vào thành mảng phân cách bởi "," sử dụng split
+    - handleCalculate truyền tiếp mảng đã xử lý vào function findMostFrequentLengths
+    - Xử lý function findMostFrequentLengths (strings):
+        + Khởi tạo 2 biến theo dõi độ dài
+        + Sử dụng forEach() để duyệt (strings) nhận vào
+        + Tính độ dài với .length và cập nhật lengthFrequency khi trùng .length
+        + Cập nhật giá trị cho lengthToStrings, thêm chuỗi vào mảng
+        
+        + Sau đó sử dụng Math.max để lấy ra length lớn nhất thuộc lengthFrequency
+        + Sử dụng filter để lọc ra giá trị trùng với max (mostFrequentLengths)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+        + Sử dụng tiếp forEach() để duyệt (length) xuất hiện nhiều (mostFrequentLengths)
+        + Lấy ra các chuỗi tương ứng từ lengthToStrings[length]
+        + Trả kết quả tìm được về resultStrings
+    - Sau khi xử lý xong, truyền lại kết quả về state
+    - Trả kết quả tìm được từ state và hiển thị lên screen
 
-## Available Scripts
+# Task 2: Sum of Top Two Integers
+    - Khởi tạo state lưu trữ input
+    - Xử lý func handleInputChange cập nhật state inputNumbers
+    - Xử lý func handleCalculate tách input thành mảng với phân cách split ","
+    - Xử lý func sumOfTopTwo để tìm sô và tính toán:
+        + Kiểm tra độ dài mảng để thực hiện tính toán
+        + Sử dụng sort để sắp xếp phần tử, so sánh a,b truyền vào
+        + Với sort((a,b) => b-a) sẽ có mảng sắp xếp từ lớn tới bé
+        + Lấy ra 2 phần từ đầu tiên, là 2 phần tử có giá trị lớn nhất
+        + Thực hiện phép cộng với 2 phần từ đầu
+    - Sau khi xử lý xong, thực hiện tiếp handleCalculate truyền lại kết quả về state
+    - Trả kết quả tìm được từ state và hiển thị lên screen
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Task 3: React-Redux Application
+    - Tạo Api_EndPoint trong config
+    - Định hình cấu trúc xử lý với Redux
+    - Tạo store lưu trạng thái
+    - Tạo types khai báo hành động cần thực hiện
+    - Tạo actions thực hiện các hành động trên kết nối với api từ config
+    - Tạo reducers thực hiện cập nhật trạng thái dựa vào types
+    - Tạo component để dispatch(action) về store
+    - Sau đó store chuyển action đến reducer phù hợp để xử lý trạng thái
+    - Sau khi dispatch thành công, payload trả kết quả về và hiển thị ở component.
